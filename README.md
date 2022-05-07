@@ -38,3 +38,6 @@
 -Cài đặt react-router-dom: npm i react-router-dom
 -Đưa cấu hình routes ra ngoài
 -Xây dựng cơ chế tải Layout
+
+10: Dựng khung Layout mặc định
+-Cài thư viện classnames: npm i classnames
