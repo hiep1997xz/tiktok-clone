@@ -32,3 +32,9 @@
 -Cài thư viện SASS: npm i -D sass
 -Reset CSS (https://www.npmjs.com/package/normalize.css)
 -Default CSS: font-family, font-size, line-height
+
+9: Cấu hình Router/Layout cho dự án
+-Phân tích tổng quan Layout: (bố cục)
+-Cài đặt react-router-dom: npm i react-router-dom
+-Đưa cấu hình routes ra ngoài
+-Xây dựng cơ chế tải Layout
