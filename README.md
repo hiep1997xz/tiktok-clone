@@ -41,3 +41,7 @@
 
 10: Dựng khung Layout mặc định
 -Cài thư viện classnames: npm i classnames
+
+11: Xây dựng UI phần Header #1
+-add logo
+-add input search
