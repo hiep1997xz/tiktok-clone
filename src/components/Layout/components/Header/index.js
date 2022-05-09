@@ -1,7 +1,10 @@
+import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
-import React from 'react';
 import images from '~/assets/images';
 import styles from './Header.module.scss';
+import Tippy from '@tippyjs/react/headless';
+import { Wrapper as PopperWrapper } from '~/components/Popper';
+import AccountItem from '~/components/AccountItem';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
@@ -10,31 +13,52 @@ import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-s
 const cx = classNames.bind(styles);
 
 const Header = () => {
+  const [searchResult, setSearchResult] = useState([]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSearchResult([1, 2, 3]);
+    }, 0);
+  }, []);
+
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
         {/* logo */}
-        <div className={cx('logo')}>
-          <img src={images.logo} alt="" />
-        </div>
+        <img src={images.logo} alt="" />
+        <Tippy
+          interactive
+          visible={searchResult.length > 0}
+          render={(attrs) => (
+            <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+              <PopperWrapper>
+                <h4 className={cx('search-title')}>Accounts</h4>
+                <AccountItem />
+                <AccountItem />
+                <AccountItem />
+                <AccountItem />
+              </PopperWrapper>
+            </div>
+          )}
+        >
+          {/* search */}
+          <div className={cx('search')}>
+            <input placeholder="Search accounts and videos" spellCheck={false} />
 
-        {/* search */}
-        <div className={cx('search')}>
-          <input placeholder="Search accounts and videos" spellCheck={false} />
+            {/* icon clear input */}
+            <button className={cx('clear')}>
+              <FontAwesomeIcon icon={faCircleXmark} />
+            </button>
 
-          {/* icon clear input */}
-          <button className={cx('clear')}>
-            <FontAwesomeIcon icon={faCircleXmark} />
-          </button>
+            {/* loading */}
+            <FontAwesomeIcon icon={faSpinner} className={cx('loading')} />
 
-          {/* loading */}
-          <FontAwesomeIcon icon={faSpinner} className={cx('loading')} />
-
-          {/* button searh */}
-          <button className={cx('search-btn')}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </button>
-        </div>
+            {/* button searh */}
+            <button className={cx('search-btn')}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
+          </div>
+        </Tippy>
         <div className={cx('actions')}></div>
       </div>
     </header>
