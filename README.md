@@ -45,3 +45,8 @@
 11: Xây dựng UI phần Header #1
 -add logo
 -add input search
+
+12: Xây dựng UI phần Header #2
+-xd thu vien Tippy de hien thi ket qua search ("@tippyjs/react": "^4.2.6",)
+-tao ra foder Popper (index, Wrapper, Popper.scss)
+-tao ra folder AccountItem (index, AccountItem.scss)
