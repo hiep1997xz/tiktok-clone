@@ -22,6 +22,8 @@ function Button({
   ...passProps
 }) {
   let Comp = 'button';
+
+  // props bat su kien khi co onclick
   const props = {
     onClick,
     ...passProps,
@@ -36,6 +38,7 @@ function Button({
     });
   }
 
+  // check truwofng hop link noi bo thi dung "to"
   if (to) {
     props.to = to;
     Comp = Link;
