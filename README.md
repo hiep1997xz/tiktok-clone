@@ -51,5 +51,12 @@
 -tao ra foder Popper (index, Wrapper, Popper.scss)
 -tao ra folder AccountItem (index, AccountItem.scss)
 
-12: Xây dựng UI phần Header #3
+13: Xây dựng UI phần Header #3 (common button login)
 -xd button dung chung
+-tao ra folder button
+
+14: Xây dựng UI phần Header #4 (icon 3 chấm header)
+
+15: Xây dựng UI phần Header #5 (thêm language => icon ba chấm header)
+
+16: Xây dựng UI phần Header #6
