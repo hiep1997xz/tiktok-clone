@@ -1,29 +1,29 @@
 import {
   faCircleQuestion,
   faCircleXmark,
-  faCloudUpload,
+  faCoins,
   faEarthAsia,
   faEllipsisVertical,
-  faKeyboard,
-  faMagnifyingGlass,
-  faSpinner,
-  faCoins,
   faGear,
+  faKeyboard,
   faSignOut,
+  faSpinner,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Tippy from '@tippyjs/react';
+import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
+import 'tippy.js/dist/tippy.css';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
+import { InboxIcon, MessageIcon, SearchIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu';
 import styles from './Header.module.scss';
-import Tippy from '@tippyjs/react';
-import HeadlessTippy from '@tippyjs/react/headless';
-import 'tippy.js/dist/tippy.css';
 
 // bind styles tra ra func cx
 const cx = classNames.bind(styles);
@@ -139,7 +139,7 @@ const Header = () => {
 
             {/* button searh */}
             <button className={cx('search-btn')}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <SearchIcon />
             </button>
           </div>
         </HeadlessTippy>
@@ -147,9 +147,20 @@ const Header = () => {
         <div className={cx('actions')}>
           {currentUser ? (
             <>
-              <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
+              <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
                 <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faCloudUpload} />
+                  <UploadIcon />
+                </button>
+              </Tippy>
+              <Tippy delay={[0, 50]} content="Message" placement="bottom">
+                <button className={cx('action-btn')}>
+                  <MessageIcon />
+                </button>
+              </Tippy>
+              <Tippy delay={[0, 50]} content="Inbox" placement="bottom">
+                <button className={cx('action-btn')}>
+                  <InboxIcon />
+                  <span className={cx('badge')}>12</span>
                 </button>
               </Tippy>
             </>
@@ -162,9 +173,9 @@ const Header = () => {
 
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img
+              <Image
                 className={cx('user-avatar')}
-                src="https://cdn-icons-png.flaticon.com/512/147/147142.png"
+                src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
                 alt="Nguyen Van A"
               />
             ) : (
