@@ -59,4 +59,9 @@
 
 15: Xây dựng UI phần Header #5 (thêm language => icon ba chấm header)
 
-16: Xây dựng UI phần Header #6
+16: Xây dựng UI phần Header #6 (xây dựng trường hợp list in icon ba chấm header khi user login)
+
+17: Xây dựng UI phần Header #7
+-thay đổi font chữ
+-thay header icons
+-tạo component image
