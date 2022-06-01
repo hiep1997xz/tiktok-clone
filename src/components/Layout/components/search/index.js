@@ -7,6 +7,7 @@ import AccountItem from '~/components/AccountItem';
 import { SearchIcon } from '~/components/Icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { useDebounce } from '~/hooks';
+import * as searchServices from '~/apiServices/searchServices';
 import styles from './Search.module.scss';
 
 const cx = classNames.bind(styles);
@@ -22,21 +23,20 @@ const Search = () => {
   const inputRef = useRef();
 
   useEffect(() => {
+    // check trường hợp người dùng sd dấu cách đầu tiên và clear dữ liệu khi xóa tìm kiếm
     if (!debounced.trim()) {
       setSearchResult([]);
       return;
     }
-    setLoading(true);
+    const fetchApi = async () => {
+      setLoading(true);
 
-    fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounced)}&type=less`)
-      .then((res) => res.json())
-      .then((res) => {
-        setSearchResult(res.data);
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
-      });
+      const result = await searchServices.search(debounced);
+
+      setSearchResult(result);
+      setLoading(false);
+    };
+    fetchApi();
   }, [debounced]);
 
   const handleClear = (e) => {
