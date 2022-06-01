@@ -65,3 +65,14 @@
 -thay đổi font chữ
 -thay header icons
 -tạo component image
+
+18: Xây dựng Logic phần Header #1
+-xử lý ô input search
+-tachs input search thanh components rieng
+
+19: Xây dựng Logic phần Header #2
+-call api search
+
+20: Xây dựng Logic phần Header #3
+-too uu login input search header
+-tao cushook useDebounce
