@@ -91,3 +91,5 @@
 -thêm style overlay cho thanh cuộn body
 -sửa title trang và update favicon
 -fix warning thư viện tippy
+
+23: Tái cấu trúc và tối ưu code #1 (header)
