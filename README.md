@@ -81,3 +81,13 @@
 -import thu vien axios
 -tao folder apiServices
 -tao folder utils
+
+22: Sửa lỗi và hoàn thiện phần Header #1
+-link logo về trang chủ
+-sửa phong chữ
+-không cho nhập kí tự đầu tiên là space trong ô tìm kiếm
+-bỏ qua hvi focus vào ô tìm kiếm sau khi submit
+-xử lí thanh cuộn trong menu đa cấp, khi có nhiều content
+-thêm style overlay cho thanh cuộn body
+-sửa title trang và update favicon
+-fix warning thư viện tippy
