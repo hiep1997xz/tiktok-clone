@@ -20,7 +20,7 @@ import Image from '~/components/Image';
 import Menu from '~/components/Popper/Menu';
 import Search from '../search';
 import styles from './Header.module.scss';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 // bind styles tra ra func cx
 const cx = classNames.bind(styles);
@@ -98,7 +98,7 @@ const Header = () => {
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
         {/* logo */}
-        <Link to={routesConfig.home} className={cx('logo-link')}>
+        <Link to={config.routes.home} className={cx('logo-link')}>
           <img src={images.logo} alt="" />
         </Link>
 
