@@ -93,3 +93,21 @@
 -fix warning thư viện tippy
 
 23: Tái cấu trúc và tối ưu code #1 (header)
+
+24: Tìm hiểu thư viện PropTypes
+
+-ktra cac kieu khai bao trong qua trinh compine -https://www.npmjs.com/package/prop-types
+-PropTypes Bạn có thể khai báo rằng một prop là một nguyên thủy JS cụ thể. Theo mặc định, những
+optionalArray: PropTypes.array,
+optionalBigInt: PropTypes.bigint,
+optionalBool: PropTypes.bool,
+optionalFunc: PropTypes.func,
+optionalNumber: PropTypes.number,
+optionalObject: PropTypes.object,
+optionalString: PropTypes.string,
+optionalSymbol: PropTypes.symbol,
+
+-Bất cứ thứ gì có thể được render duoc : số, chuỗi, phần tử hoặc một mảng
+optionalNode: PropTypes.node,
+
+25: Áp dụng PropTypes vào dự án
