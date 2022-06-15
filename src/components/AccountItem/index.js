@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
@@ -21,5 +22,10 @@ function AccountItem({ data }) {
     </Link>
   );
 }
+
+// props types để ghi lại các loại thuộc tính dự kiến ​​được truyền cho các thành phần
+AccountItem.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default AccountItem;
