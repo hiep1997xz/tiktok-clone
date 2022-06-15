@@ -111,3 +111,5 @@ optionalSymbol: PropTypes.symbol,
 optionalNode: PropTypes.node,
 
 25: Áp dụng PropTypes vào dự án
+
+26: Giải quyết vấn đề nhiều file index.js
