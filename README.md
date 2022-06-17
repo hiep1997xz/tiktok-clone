@@ -115,3 +115,5 @@ optionalNode: PropTypes.node,
 26: Giải quyết vấn đề nhiều file index.js
 
 27: Tối ưu Header phần cuối
+
+27: Xây dựng UI phần sidebar #1
